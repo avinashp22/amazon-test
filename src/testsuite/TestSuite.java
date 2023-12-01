@@ -20,7 +20,7 @@ public class TestSuite extends Utility {
     public void verifyDellLaptopIsDisplayedAndQuantity() throws InterruptedException{
 
         // add wait time to enter captcha
-        Thread.sleep(10000);
+        Thread.sleep(8000);
         //accept cookies
         clickOnElement(By.xpath("//input[@id='sp-cc-accept']"));
         //2. Type "Dell Laptop" in the search box and press enter or click on search.
