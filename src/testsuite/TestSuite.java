@@ -31,14 +31,14 @@ public class TestSuite extends Utility {
         clickOnElement(By.xpath("//li[@aria-label='Dell']//i[@class='a-icon a-icon-checkbox']"));
         //4. Verify that the  30 (Maybe different) products are displayed on the page.
         List<WebElement> productCount = driver.findElements(By.className("sg-col-inner"));
-        System.out.println("Number of products:" + productCount.size());
-        //1.5 . Print all product names in the console.
+        System.out.println("Number of products - " + productCount.size());
+        //5 . Print all product names in the console.
         List<WebElement> productNames = driver.findElements(By.xpath("//span[@class='a-size-medium a-color-base a-text-normal']"));
-        for (WebElement names : productNames) {System.out.println("Names of product : " + names.getText());}
+        for (WebElement names : productNames) {System.out.println("Name of products - " + names.getText());}
         //6. Click on the product name 'Dell XPS 15 9530 15.6" OLED 3.5K 400-Nit Touchscreen Laptop, 13th Gen Intel EVO i7-13700H Processor, 16GB RAM, 1TB SSD, NVIDIA RTX 4060, Windows 11, Silver
-        clickOnElement(By.xpath("//span[contains(text(),'XPS 15 9530 15.6\" OLED 3.5K 400-Nit Touchscreen Laptop, 13th Gen Intel EVO i7-13700H Processor, 16GB RAM, 1TB SSD, NVIDIA RTX 4060, Windows 11, Silver')]"));
+        clickOnElement(By.xpath("//span[normalize-space()='Dell XPS 15 9530 Laptop, 15.6\" FHD+ InfinityEdge, Intel Core i7-13700H, Intel Arc A370M Graphics, 512GB SSD, 16GB RAM, Fingerprint Reader, Backlit Keyboard, Windows 11, Silver']"));
        // 7. Verify the Product name 'Dell XPS 15 9530 15.6" OLED 3.5K 400-Nit Touchscreen Laptop, 13th Gen Intel EVO i7-13700H Processor, 16GB RAM, 1TB SSD, NVIDIA RTX 4060, Windows 11, Silver
-        verifyText("Incorrect Text","Dell XPS 15 9530 15.6\" OLED 3.5K 400-Nit Touchscreen Laptop, 13th Gen Intel EVO i7-13700H Processor, 16GB RAM, 1TB SSD, NVIDIA RTX 4060, Windows 11, Silver",By.xpath("//span[@id='productTitle']"));
+        verifyText("Incorrect Text","Dell XPS 15 9530 Laptop, 15.6\" FHD+ InfinityEdge, Intel Core i7-13700H, Intel Arc A370M Graphics, 512GB SSD, 16GB RAM, Fingerprint Reader, Backlit Keyboard, Windows 11, Silver",By.xpath("//span[@id='productTitle']"));
 
     }
 

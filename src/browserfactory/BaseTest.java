@@ -9,7 +9,7 @@ import java.time.Duration;
 
 public class BaseTest {
 
-    static String browser = "Chrome"; // choose browser
+    static String browser = "chrome"; // choose browser
     public static WebDriver driver; // declare globally make public so can inherit
 
     public void openBrowser(String baseURL)
